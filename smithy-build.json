@@ -1,0 +1,14 @@
+{
+    "version": "1.0",
+    "sources": ["model"],
+    "maven": {
+        "dependencies": [
+            "com.disneystreaming.smithy:smithytranslate-traits:0.5.11"
+        ],
+        "repositories": [
+            {
+                "url": "https://repo.maven.apache.org/maven2/"
+            }
+        ]
+    }
+}

@@ -30,7 +30,7 @@ operation OperationErrors  {
 }
 
 structure Error {
-    code: ErrorStatusCode
+    code: ErrorCode
     case: String
     /// A developer-facing error message, which should be in English.
     /// It must not be used as a user-facing error message.
@@ -38,7 +38,7 @@ structure Error {
     details: Document
 }
 
-/// Status code for API users.
+/// Error code for API users.
 /// - 0 OK
 ///
 ///     HTTP Mapping: 200 OK
@@ -166,7 +166,7 @@ structure Error {
 ///
 ///      HTTP Mapping: 401 Unauthorized
 ///
-enum ErrorStatusCode {
+enum ErrorCode {
     OK = "0"
     OP_CANCELLED = "1"
     UNKNOWN_ERROR = "2"

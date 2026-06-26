@@ -9,7 +9,7 @@
 
 | 文件 | 提供 |
 | --- | --- |
-| `error.smithy` | `Error`、`ErrorStatusCode`、`HTTP4xxResp`、`HTTP5xxResp`、`OperationErrors`（mixin） |
+| `error.smithy` | `Error`、`ErrorCode`、`HTTP4xxResp`、`HTTP5xxResp`、`OperationErrors`（mixin） |
 | `pagination.smithy` | `PagingParams` / `PageMetadata`（mixin）、`SortOrder` |
 | `types.smithy` | `I18nText`、`Language`、`LanguageCode`、`JSONSchema`、`Any` |
 

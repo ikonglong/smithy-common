@@ -20,7 +20,7 @@ structure HTTP5xxResp {
     body: Error
 }
 
-/// HttpAPIRespErrors, OperationErrors
+/// Mixin attaching the standard 4xx/5xx error responses to an operation.
 @mixin
 operation OperationErrors  {
     errors: [
@@ -158,7 +158,7 @@ structure Error {
 ///      credentials for the operation.
 ///
 ///     HTTP Mapping: 401 Unauthorized
-/// - 29 ILLEGAL_ARG means that the arguments passed to an operation within the program is illegal. 
+/// - 29 ILLEGAL_ARG means that the arguments passed to a server-internal operation is illegal.
 ///
 ///      HTTP Mapping: 500 Internal Server Error
 /// - 30 AUTHORIZATION_EXPIRED means a user's authorization expired, and it is

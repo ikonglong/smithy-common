@@ -12,7 +12,7 @@ enum SortOrder {
 
 /// Common pagination parameters for list operations
 @mixin
-structure PageReq {
+structure PagingParams {
     /// This specifies a limit on the number of objects to return, ranging between 1 and 100.
     @httpQuery("limit")
     @range(min: 1, max: 100)
@@ -26,7 +26,7 @@ structure PageReq {
     @httpQuery("ending_before")
     ending_before: String
 
-    /// Default sort direction.
+    /// Default sort order.
     /// Note: Regardless of this parameter, **the returned list is always sorted in ascending order by time/ID (oldest to newest)** for a natural reading experience.
     /// This parameter only determines **the entry point of the initial request** (when neither starting_after nor ending_before is provided):
     /// - asc: Start from the beginning of the timeline (oldest). The first request returns the oldest N items (e.g. [1, 2, 3]).
@@ -38,7 +38,7 @@ structure PageReq {
 
 /// Common pagination response fields
 @mixin
-structure PageResp {  
+structure PageMetadata {
     /// Whether or not there are more elements available after this set. If false, this set comprises the end of the list.
     @required
     has_more: Boolean

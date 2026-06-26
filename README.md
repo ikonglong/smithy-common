@@ -1,6 +1,6 @@
 # smithy-common
 
-可复用的公共 Smithy 模型（`common` 命名空间）：错误结构、分页、国际化与通用标量类型。
+可复用的公共 Smithy 模型（`common` 命名空间）：错误结构、分页、国际化与通用类型。
 通过 [JitPack](https://jitpack.io) 以 Maven JAR 形式分发，供各 API 定义仓库依赖、复用同一套公共模型。
 
 ## 内容
@@ -10,8 +10,8 @@
 | 文件 | 提供 |
 | --- | --- |
 | `error.smithy` | `Error`、`ErrorStatusCode`、`HTTP4xxResp`、`HTTP5xxResp`、`OperationErrors`（mixin） |
-| `pagination.smithy` | `PageReq` / `PageResp`（mixin）、`SortOrder` |
-| `type.smithy` | `I18nText`、`Language`、`LanguageCode`、`JSONSchema`、`Any` |
+| `pagination.smithy` | `PagingParams` / `PageMetadata`（mixin）、`SortOrder` |
+| `types.smithy` | `I18nText`、`Language`、`LanguageCode`、`JSONSchema`、`Any` |
 
 ## 在消费方使用
 
@@ -35,7 +35,7 @@
 
 ```smithy
 use common#OperationErrors
-use common#PageReq
+use common#PagingParams
 use common#Error
 ```
 
